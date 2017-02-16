@@ -55,6 +55,8 @@ cabbrev W w
 cabbrev Q q
 cabbrev WQ wq
 
+inoremap <C-Space> <C-x><C-o>
+inoremap <C-@> <C-Space>
 
 "插件配置
 "==================================================
@@ -85,6 +87,10 @@ let g:airline_powerline_fonts = 1
 
 "Dash
 nmap <silent> <leader>d <Plug>DashSearch
+
+" phpcd php代码补全
+autocmd FileType php setlocal omnifunc=phpcd#CompletePHP
+" source /root/.vim/tmap.vim
 
 "Bundle 配置
 "================================================== 
@@ -135,6 +141,11 @@ Plugin 'rizzatti/dash.vim'
 Plugin 'vim-scripts/fakeclip'
 
 Plugin 'avakhov/vim-yaml'
+
+"php 代码补全
+Plugin 'lvht/phpcd.vim', {'for': 'php', 'do': 'composer update'}
+Plugin 'shawncplus/phpcomplete.vim'
+
 call vundle#end()
 "============================================
 
