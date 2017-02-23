@@ -50,6 +50,11 @@ map <S-l> :tabn<CR>
 map <C-_> :sp<CR>
 map <C-\> :vs<CR>
 
+"vim 缓冲区文件切换映射
+map gn :bn<CR>
+map gp :bp<CR>
+map gd :bd<CR>
+
 "命令映射
 cabbrev W w
 cabbrev Q q
